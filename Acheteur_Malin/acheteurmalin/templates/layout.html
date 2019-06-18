@@ -28,28 +28,28 @@
 </head>
 <body>
 
-			<header class= "topnav">
+			<header class= "topwrap">
 				
-				<img class= "logo navelement" src="static/image/flamme.png" alt="logo en forme de flamme">				
-				<a class= "navelement"  href="{{ url_for('accueil') }}">AcheteurMalin</a>
-				<a class="navelement" href="{{ url_for('accueil') }}">Accueil</a>
-				<a class="navelement" href="{{ url_for('enregistrer') }}">Enregistrer</a>
-				    
-				<div class="subnavbtn">
-					<a class="navelement" href="{{ url_for('accueil') }}">Catégories</a>
+				<div class="topnav">
+					<img class= "logo navelement" src="static/image/flamme.png" alt="logo en forme de flamme">				
+					<a class= "navelement"  href="{{ url_for('accueil') }}">AcheteurMalin</a>
+					<a class="navelement" href="{{ url_for('accueil') }}">Accueil</a>
+					<a class="navelement" href="{{ url_for('enregistrer') }}">Enregistrer</a>
+					    
+					<div class="subnavbtn">
+						<a class="navelement" href="{{ url_for('accueil') }}">Catégories</a>
+					</div>
+						
+					<div class="subnav-content">
+						<a href="{{ url_for('hightech') }}">Hightech</a>
+						<a href="{{ url_for('musique') }}">Musique</a>
+						<a href="{{ url_for('electromenager') }}">Electroménager</a>
+						<a href="{{ url_for('telephone') }}">Téléphone</a>
+					</div>
 				</div>
-				<img class= "twitter navelement" src="static/image/twitter.png" alt="logo twitter">
-					
-				<div class="subnav-content">
-					<a href="{{ url_for('hightech') }}">Hightech</a>
-					<a href="{{ url_for('musique') }}">Musique</a>
-					<a href="{{ url_for('electromenager') }}">Electroménager</a>
-					<a href="{{ url_for('telephone') }}">Téléphone</a>
-				</div>
-		 		
 				
 			</header>
-			<main role="main">
+			<main role="main" class="wrapcontent">
 				{% with messages = get_flashed_messages(with_categories=true) %}
 			    	{% if messages %}
 			    		{% for category, message in messages %}
