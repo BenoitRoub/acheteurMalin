@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags notamment pour les portables-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='objet.css') }}">
+     <link rel="stylesheet" type="text/css" href="/static/main.css">
+     <link rel="stylesheet" type="text/css" href="/objet/main.css">
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Vollkorn&display=swap" rel="stylesheet">
+
+     <link rel="shortcut icon" href="static/image/favicon.ico">
+
+	{% if title %}
+	 	<title>AcheteurMalin - {{ title }}</title>
+	{% else %}
+		<title>AcheteurMalin</title>
+	{% endif %}
+
+	{% if description %}
+	<meta name="description" content="{{ description }}">
+	{% else %}
+	<meta name="description" content="Comparez les informations sur les ventes de produit. Suivez nos conseil pour éffectuer des achats malins. Information, conseil et comparatif achat.">
+	{% endif %}
+
+</head>
+<body>
+
+			<header class= "topnav">
+				
+				<img class= "logo navelement" src="static/image/flamme.png" alt="logo en forme de flamme">				
+				<a class= "navelement"  href="{{ url_for('accueil') }}">AcheteurMalin</a>
+				<a class="navelement" href="{{ url_for('accueil') }}">Accueil</a>
+				<a class="navelement" href="{{ url_for('enregistrer') }}">Enregistrer</a>
+				    
+				<div class="subnavbtn">
+					<a class="navelement" href="{{ url_for('accueil') }}">Catégories</a>
+				</div>
+				<img class= "twitter navelement" src="static/image/twitter.png" alt="logo twitter">
+					
+				<div class="subnav-content">
+					<a href="{{ url_for('hightech') }}">Hightech</a>
+					<a href="{{ url_for('musique') }}">Musique</a>
+					<a href="{{ url_for('electromenager') }}">Electroménager</a>
+					<a href="{{ url_for('telephone') }}">Téléphone</a>
+				</div>
+		 		
+				
+			</header>
+			<main role="main">
+				{% with messages = get_flashed_messages(with_categories=true) %}
+			    	{% if messages %}
+			    		{% for category, message in messages %}
+			    		<div class="alert alert-{{ category }}">
+			    			{{ message }}
+			    		</div>
+			    		{% endfor %}
+			    	{% endif %}
+			    {% endwith %}
+				{% block content %}{% endblock %}
+			</main>
+			
+		<footer class="footer">
+			<p>c 2019 Suivi des Tendances - </p>
+			<a href="{{ url_for('mentionslegales') }}"> mentions légales</a>
+		</footer>
+	
+</body>
+</html>

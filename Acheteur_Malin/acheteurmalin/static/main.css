@@ -1,0 +1,193 @@
+/* STYLE GENERAUX */
+
+  html, body {
+    margin: 0;
+    height: 145%;
+            
+  }
+
+  body {
+    position: relative;
+    background: url("image/ordinateur et café.jpg"), center;
+    background-size: cover;
+    margin-bottom: 0%;
+    min-height: 100%;
+    font-size: 30px;
+    font-family: 'Vollkorn', serif;
+  }
+
+  a {
+    outline: none;
+    text-decoration: none;
+    color: #000;
+  }
+
+  a:hover {
+    color: #666 !important;
+   }
+
+
+/* MEDIA QUERRY */
+
+  @media screen and (min-width: 1400px) and (max-width: 2400px) {
+   body {
+        
+        font-size: 30px;
+     }
+  }
+
+  @media screen and (min-width: 950px) and (max-width: 1400px) {
+   body {
+         font-size:23px;
+     }
+  }
+
+  @media screen and (min-width: 0px) and (max-width: 950px) {
+     body {
+          font-size: 15px;
+         }
+  }
+
+
+/*  BAR DE NAVIGATION   */
+
+  .topnav{
+  position: absolute;
+  top: 1%;
+  height: 4%;
+  width: 100%;
+  }
+
+  /* TEXTE NAVBAR   */
+
+    .navelement {
+      display:inline-block;
+      vertical-align:middle;
+      text-align:left;
+      padding-left: 8%;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 100%;
+      line-height: 100%;
+
+      color: #FFFFFF;
+
+      text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+
+    .logo {
+
+      height: auto;
+      width: 4%;
+    }
+
+    .twitter {
+      height: 35px;
+      width: auto;
+      transition: transform 2s;
+    }
+
+      /* SOUS MENU CACHE */
+
+        .subnavbtn {
+          height:100%;
+          display:inline-block;
+          padding-left: 8%;
+        }
+
+
+        .subnav-content {
+          display: none;
+          background: rgba(26, 26, 26, 0.79);
+          width: 90%;
+          padding:0 5%;  
+        }
+
+        .subnav-content a {
+          float: left;
+          color: white;
+          text-decoration: none;
+          padding-top: 40px;
+          padding-bottom: 40px;
+          text-align: center;
+          padding-left: 8%;
+          padding-right: 8%;
+        }
+
+        /* When you move the mouse over the subnav container, open the subnav content */
+        .subnavbtn:hover ~.subnav-content {
+          display: flex;
+          cursor: pointer;
+        }
+
+        .subnav-content:hover {
+          display: flex;
+          cursor: pointer;
+        }
+
+
+
+/* TEXTE INFORMATIF
+MILIEU DE PAGE */
+        
+  .infocontainer {
+    position: absolute;
+    background: rgba(240, 240, 240, 0.95);
+    width: 65%;
+    top: 14%;
+    left: 17.5%;
+    height: 20%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .infocontainer .texte{
+    font-family: vollkorn;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 66%;
+    line-height: 110%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 0px;
+    padding-top: 7%;
+    display: inline-block;
+  }
+
+  .infocontainer .h1 {
+    padding-left: 0%;
+    font-weight: 500;
+    font-size: 90%;
+  }
+
+  .infocontainer .nomarge {
+    padding-right: 0%;
+    font-weight: 600;
+    font-size: 90%;
+  }
+
+
+
+/*  FOOTER BAS DE PAGE */
+        
+  .footer {
+    display: flex;
+    position: absolute;
+    bottom: 1%;
+    left: 40%;
+    width: 20%;
+    font-family: PT Serif;
+    font-style: normal;
+    font-size: 70%;
+    line-height: 70%;
+  }
+
+  .footer  p {
+    margin: 0px;
+  }
+
+
+
+
+

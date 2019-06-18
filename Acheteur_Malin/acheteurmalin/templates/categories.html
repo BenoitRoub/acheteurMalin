@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+	
+	{% block infotop %}{% endblock %}
+
+	<div class="objetcontainer">
+		{% for object in objet %}
+			<div class="objet">
+				<img class= "photo" src="{{ object.image_file }}" alt="photo de l'{{ object.nom }}">
+				<h3 class="texteobjet nomobjet" href=#>{{ object.nom }}</h3> 
+				<a class="texteobjet prixobjet" href=#>{{ objectaffiliation }}</a>	
+				<a class="texteobjet commentaire" href=#>{{ object.commentaire }}</a>  
+			</div>
+		{% endfor %}
+
+	</div>
+
+{% endblock content %}

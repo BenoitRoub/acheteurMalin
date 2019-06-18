@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="content-section">
+		<form method="POST" action="">
+			{{ form.hidden_tag() }} <!-- csrf attaque -->
+			<fieldset class="form-group">
+				<legend class="border-bottom mb-4">Enregistre ton objet</legend>
+				<div class="form-group">
+					{{ form.nom.label(class="form-control-label") }}
+
+					{% if form.nom.errors %}
+						{{ form.nom(class="form-control form-control-lg is-invalid") }}
+						<div class="invalid-feedback">
+							{% for error in form.nom.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+							
+					{% else %}
+						{{ form.nom(class="form-control form-control-lg") }}						
+					{% endif %}
+
+
+				</div>
+				<div class="form-group">
+					{{ form.categorie.label(class="form-control-label") }}
+
+					{% if form.categorie.errors %}
+						{{ form.categorie(class="form-control form-control-lg is-invalid") }}
+						<div class="invalid-feedback">
+							{% for error in form.categorie.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+							
+					{% else %}
+						{{ form.categorie(class="form-control form-control-lg") }}						
+					{% endif %}
+				</div>
+				<div class="form-group">
+					{{ form.image_file.label(class="form-control-label") }}
+
+					{% if form.image_file.errors %}
+						{{ form.image_file(class="form-control form-control-lg is-invalid") }}
+						<div class="invalid-feedback">
+							{% for error in form.image_file.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+							
+					{% else %}
+						{{ form.image_file(class="form-control form-control-lg") }}						
+					{% endif %}
+				</div>
+				<div class="form-group">
+					{{ form.affiliation.label(class="form-control-label") }}
+
+					{% if form.affiliation.errors %}
+						{{ form.affiliation(class="form-control form-control-lg is-invalid") }}
+						<div class="invalid-feedback">
+							{% for error in form.affiliation.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+							
+					{% else %}
+						{{ form.affiliation(class="form-control form-control-lg") }}						
+					{% endif %}
+				</div>
+				<div class="form-group">
+					{{ form.commentaire.label(class="form-control-label") }}
+
+					{% if form.commentaire.errors %}
+						{{ form.commentaire(class="form-control form-control-lg is-invalid") }}
+						<div class="invalid-feedback">
+							{% for error in form.commentaire.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+							
+					{% else %}
+						{{ form.commentaire(class="form-control form-control-lg") }}						
+					{% endif %}
+				</div>
+			</fieldset>
+			<div class="form-group">
+				{{ form.submit(class="btn btn-outline-info") }}
+			</div>
+		</form>
+
+{% endblock content %}

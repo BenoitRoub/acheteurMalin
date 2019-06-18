@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% block content %}
+
+	<div class="infocontainer">
+		<h2 class="texte">AcheteurMalin : </h2>
+		<H1 class="texte">Information, conseil et comparatif achat.</H1>
+		<H2 class="texte">Retrouvez les objets les plus vendus du moment dans chaque catégorie. Comparez les au courbes des prix
+enregistré pour savoir combien vous devriez dépenser et ainsi éffectué un achat malin. En effet les statistiques de 
+masse permette de se faire une idée réaliste et pertinente de l’investissement à éffectuer.</H2>
+	</div>
+
+	<div class="objetcontainer">
+		{% if objet[0] %}
+			<div class="objet objet1">
+				<img class= "photo" src="static/objet_photo\37ca375f8ca9d2f9.jpg" alt="photo de l'{{ objet[0].nom }}">
+				<h3 class="texteobjet nomobjet" href=#>{{ objet[0].nom }}</h3> 
+				<a class="texteobjet prixobjet" href=#>{{ objet[0].affiliation }}</a>	
+				<a class="texteobjet commentaire" href=#>{{ objet[0].commentaire }}</a>  
+			</div>
+		{% endif %}
+
+		{% if objet[1] %}
+			<div class="objet objet2">
+				<img class= "photo" src="/acheteurmalin/static/objet_photo/37ca375f8ca9d2f9.jpg" alt="photo de l'{{ objet[1].nom }}">
+				<h3 class="texteobjet nomobjet" href=#>{{ objet[1].nom }}</h3> 
+				<a class="texteobjet prixobjet" href=#>{{ objet[1].affiliation }}</a>	
+				<a class="texteobjet commentaire" href=#>{{ objet[1].commentaire }}</a> 
+			</div>
+		{% endif %}
+
+		{% if objet[2] %}
+			<div class="objet objet3">
+				<img class= "photo" src="{{ objet[2].image_file }}" alt="photo de l'{{ objet[2].nom }}">
+				<h3 class="texteobjet nomobjet" href=#>{{ objet[2].nom }}</h3> 
+				<a class="texteobjet prixobjet" href=#>{{ objet[2].affiliation }}</a>	
+				<a class="texteobjet commentaire" href=#>{{ objet[2].commentaire }}</a> 
+			</div>
+		{% endif %}
+
+		{% if objet[3] %}
+			<div class="objet objet4">
+				<img class= "photo" src="{{ objet[3].image_file }}" alt="photo de l'{{ objet[3].nom }}">
+				<h3 class="texteobjet nomobjet" href=#>{{ objet[3].nom }}</h3> 
+				<a class="texteobjet prixobjet" href=#>{{ objet[3].affiliation }}</a>	
+				<a class="texteobjet commentaire" href=#>{{ objet[3].commentaire }}</a> 
+			</div>
+		{% endif %}
+
+		{% if objet[4] %}
+			<div class="objet objet5">
+				<img class= "photo" src="{{ objet[4].image_file }}" alt="photo de l'{{ objet[4].nom }}">
+				<h3 class="texteobjet nomobjet" href=#>{{ objet[4].nom }}</h3> 
+				<a class="texteobjet prixobjet" href=#>{{ objet[4].affiliation }}</a>	
+				<a class="texteobjet commentaire" href=#>{{ objet[4].commentaire }}</a> 
+			</div>
+		{% endif %}
+
+		{% if objet[5] %}
+			<div class="objet objet6">
+				<img class= "photo" src="{{ objet[5].image_file }}" alt="photo de l'{{ objet[5].nom }}">
+				<h3 class="texteobjet nomobjet" href=#>{{ objet[5].nom }}</h3> 
+				<a class="texteobjet prixobjet" href=#>{{ objet[5].affiliation }}</a>	
+				<a class="texteobjet commentaire" href=#>{{ objet[5].commentaire }}</a> 
+			</div>
+		{% endif %}
+
+	</div>
+
+{% endblock content %}
