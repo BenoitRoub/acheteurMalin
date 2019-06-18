@@ -32,19 +32,20 @@
 				
 				<div class="topnav">
 					<img class= "logo navelement" src="static/image/flamme.png" alt="logo en forme de flamme">				
-					<a class= "navelement"  href="{{ url_for('accueil') }}">AcheteurMalin</a>
-					<a class="navelement" href="{{ url_for('accueil') }}">Accueil</a>
-					<a class="navelement" href="{{ url_for('enregistrer') }}">Enregistrer</a>
+					<a class= "navelement"  href="{{ url_for('categories.accueil') }}">AcheteurMalin</a>
+					<a class="navelement" href="{{ url_for('categories.accueil') }}">Accueil</a>
 					    
 					<div class="subnavbtn">
-						<a class="navelement" href="{{ url_for('accueil') }}">Catégories</a>
+						<a class="navelement" href="{{ url_for('categories.accueil') }}">Catégories</a>
 					</div>
+
+					<a class="navelement" href="{{ url_for('main.enregistrer') }}">Enregistrer</a>
 						
 					<div class="subnav-content">
-						<a href="{{ url_for('hightech') }}">Hightech</a>
-						<a href="{{ url_for('musique') }}">Musique</a>
-						<a href="{{ url_for('electromenager') }}">Electroménager</a>
-						<a href="{{ url_for('telephone') }}">Téléphone</a>
+						<a href="{{ url_for('categories.hightech') }}">Hightech</a>
+						<a href="{{ url_for('categories.musique') }}">Musique</a>
+						<a href="{{ url_for('categories.electromenager') }}">Electroménager</a>
+						<a href="{{ url_for('categories.telephone') }}">Téléphone</a>
 					</div>
 				</div>
 				
@@ -64,7 +65,7 @@
 			
 		<footer class="footer">
 			<p>c 2019 Suivi des Tendances - </p>
-			<a href="{{ url_for('mentionslegales') }}"> mentions légales</a>
+			<a href="{{ url_for('main.mentionslegales') }}"> mentions légales</a>
 		</footer>
 	
 </body>

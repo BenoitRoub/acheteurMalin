@@ -1,16 +1,27 @@
 from flask import Flask
 from flask_pymongo import PyMongo
 from flask_bcrypt import Bcrypt
-
-app = Flask(__name__)
-app.config['SECRET_KEY'] = '4481969b34e8b98798e232ad4f10453f'
-app.config['MONGO_URI'] = 'mongodb+srv://gomgom:gomgom01@cluster0-e8trm.mongodb.net/test?retryWrites=true&w=majority'
-
-mongo = PyMongo(app)
+from acheteurmalin.config import Config
 
 
+mongo = PyMongo()
+bcrypt = Bcrypt()
 
-bcrypt = Bcrypt(app)
 
 
-from acheteurmalin import routes	
+
+def create_app(config_class=Config):
+
+	app = Flask(__name__)
+	app.config.from_object(Config)
+
+	mongo.init_app(app)
+	bcrypt.init_app(app)
+	
+	from acheteurmalin.categories.routes import categories
+	from acheteurmalin.main.routes import main		
+
+	app.register_blueprint(categories)
+	app.register_blueprint(main)
+
+	return app
