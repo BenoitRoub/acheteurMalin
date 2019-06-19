@@ -10,7 +10,7 @@
   }
   body {
     position: relative;
-    background: url("image/ordinateur et café.jpg"), center;
+    background: center/ contain, no-repeat url("image/ordinateur et café.jpg");
     background-size: cover;
     margin-bottom: 0%;
     min-height: 100%;
