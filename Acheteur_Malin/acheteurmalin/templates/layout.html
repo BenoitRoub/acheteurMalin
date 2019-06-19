@@ -26,7 +26,9 @@
 	{% endif %}
 
 </head>
-<body>
+<body>	
+
+			<div class=background></div>
 
 			<header class= "topwrap">
 				
@@ -50,6 +52,7 @@
 				</div>
 				
 			</header>
+
 			<main role="main" class="wrapcontent">
 				{% with messages = get_flashed_messages(with_categories=true) %}
 			    	{% if messages %}
@@ -63,10 +66,10 @@
 				{% block content %}{% endblock %}
 			</main>
 			
-		<footer class="footer">
+		<!--<footer class="footer">
 			<p>c 2019 Suivi des Tendances - </p>
 			<a href="{{ url_for('main.mentionslegales') }}"> mentions légales</a>
-		</footer>
+		</footer>-->
 	
 </body>
 </html>

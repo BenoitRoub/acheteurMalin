@@ -10,8 +10,6 @@
   }
   body {
     position: relative;
-    background: center/ contain, no-repeat url("image/ordinateur et café.jpg");
-    background-size: cover;
     margin-bottom: 0%;
     min-height: 100%;
     font-size: 30px;
@@ -28,7 +26,14 @@
     color: #666 !important;
    }
 
-
+  .background {
+    position: fixed;
+    width: 100%;
+    background: center url("image/ordinateur et café.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150%;
+  }
 /* MEDIA QUERRY */
 
 
@@ -83,10 +88,24 @@
           display: none;
           background: rgba(26, 26, 26, 0.79);
           width: 90%;
-          padding:0 5%;  
+          padding:0 5%;
+          overflow: hidden;
+        }
+
+        @media (max-width: 1450px) {
+          .subnav-content a {
+            font-size: 70%;
+          }
+        }
+
+        @media (max-width: 1150px) {
+          body {
+            font-size: 20px;
+          }
         }
 
         .subnav-content a {
+          display: inline-block;
           float: left;
           color: white;
           text-decoration: none;
@@ -120,54 +139,112 @@ MILIEU DE PAGE */
         
   .infocontainer {
     display:block;
-    background: rgba(240, 240, 240, 0.95);
     width: 100%;
     height: auto;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.75);
+    background: #FFFFFF; 
+  }
+
+  .infocontainertest {
+    display:block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+   /* box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.75);
+    background: #FFFFFF; */
+  }
+
+   .infocontainertest .texte{
+    font-family: vollkorn;
+    
+    display: inline-block;
+
+  }
+
+  .infocontainertest .h1 {
+    padding-left: 10%;
+    font-weight: 500;
+    font-size: 90%;
+    padding-top: 3%;
+  }
+
+  .infocontainertest .nomarge {
+    padding-right: 0%;
+    font-weight: 700;
+    font-size: 120%;
+    padding-top: 3%;
+    padding-left: 4%;
+  }
+
+  .infocontainer2 {
+    padding: 2% 30px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .contenu{
+    float: left;
+    width: 65%;
+    font-size: 66%;
+    margin-bottom: 30px;
+    margin-top: 30px  ;
+  }
+
+  .infocontainertest .courbe  {
+    float: right;
+    height: 100%;
+    width: auto;
   }
 
   .infocontainer .texte{
     font-family: vollkorn;
     
     display: inline-block;
+
   }
 
   .infocontainer .h1 {
-    padding-left: 0%;
+    padding-left: 10%;
     font-weight: 500;
-    font-size: 80%;
+    font-size: 90%;
     padding-top: 3%;
   }
 
   .infocontainer .nomarge {
     padding-right: 0%;
-    font-weight: 600;
-    font-size: 80%;
+    font-weight: 700;
+    font-size: 120%;
     padding-top: 3%;
     padding-left: 4%;
   }
 
   .infocontainer2 {
-    padding: 2% 4% 4% 4%;
+    padding: 2% 30px;
+    height: 100%;
+    width: 100%;
   }
 
   .contenu{
     float: left;
-    width: 45%;
+    width: 65%;
     font-size: 66%;
+    margin-bottom: 30px;
+    margin-top: 30px  ;
   }
 
   .infocontainer .courbe  {
     float: right;
-    height: 80%;
+    height: 100%;
     width: auto;
-    padding: 3% 8% 3% 3%;
   }
 
 /*  FOOTER BAS DE PAGE */
         
   .footer {
+    position: absolute;
     padding: 50px;
     font-family: PT Serif;
     font-style: normal;
@@ -177,6 +254,7 @@ MILIEU DE PAGE */
     display: inline block;
     margin: 0px;
     text-align: center;
+    bottom: 10px;
   }
 
 

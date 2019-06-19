@@ -6,7 +6,10 @@
 	<div class="objetcontainer">
 		{% for object in objet %}
 			<div class="objet">
-				<img class= "photo" src="{{ object.image_file }}" alt="photo de l'{{ object.nom }}">
+				<div class=containerphoto>
+					<img class= "photo" src="{{ object.image_file }}" alt="photo de l'{{ object.nom }}">
+				<!--	<div style="background-size: contain; background:no-repeat url({{ object.image_file }});" class="photo"></div> -->
+				</div>
 				<h3 class="texteobjet nomobjet" href=#>{{ object.nom }}</h3> 
 				<a class="texteobjet prixobjet" href=#>{{ object.affiliation }}</a>	
 				<a class="texteobjet commentaire" href=#>{{ object.commentaire }}</a>  
