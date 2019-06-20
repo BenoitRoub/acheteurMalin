@@ -7,8 +7,8 @@
 
      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='objet.css') }}">
-     <link rel="stylesheet" type="text/css" href="/static/main.css">
-     <link rel="stylesheet" type="text/css" href="/objet/main.css">
+  	 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mediaQ.css') }}">
+  
      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Vollkorn&display=swap" rel="stylesheet">
 
      <link rel="shortcut icon" href="static/image/favicon.ico">
@@ -38,7 +38,7 @@
 					<a class="navelement" href="{{ url_for('categories.accueil') }}">Accueil</a>
 					    
 					<div class="subnavbtn">
-						<a class="navelement" href="{{ url_for('categories.accueil') }}">Catégories</a>
+						<p class="navelement" href="{{ url_for('categories.accueil') }}">Catégories</p>
 					</div>
 
 					<a class="navelement" href="{{ url_for('main.enregistrer') }}">Enregistrer</a>
