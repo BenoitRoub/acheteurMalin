@@ -42,6 +42,10 @@
         font-size: 25px;
       }
 
+      .background {
+        width: 130%;
+        height:130%;
+      }
      .infocontainer .courbe  {
       float: right;
       height: 100%;
