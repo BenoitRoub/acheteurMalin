@@ -37,6 +37,11 @@
 /* MEDIA QUERRY */
 
  @media (max-width: 650px) {
+
+      body {
+        font-size: 25px;
+      }
+
      .infocontainer .courbe  {
       float: right;
       height: 100%;
@@ -95,12 +100,53 @@
       text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     }
 
-    @media (max-width: 800px) {
+    @media (min-width:510px) and (max-width: 800px) {
       .navelement {
         font-size:80%;
         padding-left: 4%;
       }
+
+       .contenu {
+        font-size: 65%!important;
+      }
+
+      .infocontainer .texte{
+        font-size: 70%!important;
+      }
+       .infocontainer .courbe {
+        height: 200px!important;
+        width: 200px!important;
+        padding-right: 25%;
+      }
     }
+
+    @media (min-width:350px) and (max-width: 510px) {
+      .navelement {
+        font-size:70%;
+        padding-left: 2%;
+      }
+
+      .contenu {
+        font-size: 60%!important;
+      }
+      .infocontaineur h1{
+        font-size: 70%!important;
+      }
+      .infocontainer .courbe {
+        height: 150px!important;
+        width: 150px!important;
+        padding-right: 25%;
+      }
+    }
+
+     @media (max-width: 350px){
+
+      .infocontainer .courbe {
+          height: 130px!important;
+          width: 130px!important;
+          padding-right: 25%;
+        }
+      }
 
     .logo {
 
