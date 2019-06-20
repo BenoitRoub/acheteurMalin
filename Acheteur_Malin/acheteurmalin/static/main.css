@@ -170,10 +170,29 @@
           padding:0 5%;
           overflow: hidden;
         }
+        
+        @media (max-width: 1800px) {
+          .subnav-content a {
+            font-size: 70%;
+          }
+        }
+
+         @media (max-width: 1600px) {
+          .subnav-content a {
+            font-size: 70%;
+          }
+        }
+
 
         @media (max-width: 1450px) {
           .subnav-content a {
             font-size: 70%;
+          }
+        }
+
+        @media (max-width: 1450px) {
+          .subnav-content a {
+            font-size: 60%;
           }
         }
 
@@ -182,6 +201,19 @@
             font-size: 20px;
           }
         }
+
+         @media (max-width: 1150px) {
+          body {
+            font-size: 20px;
+          }
+        }
+
+        @media (min-width: 650px) and (max-width: 750px) {
+          .subnav-content a {
+            font-size: 50%;
+          }
+        }
+
 
         .subnav-content a {
           display: inline-block;
