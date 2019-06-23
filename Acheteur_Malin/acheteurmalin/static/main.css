@@ -14,6 +14,7 @@
     min-height: 100%;
     font-size: 30px;
     font-family: 'Vollkorn', serif;
+    color: #fff;
   }
 
   a {
@@ -29,7 +30,7 @@
   .background {
     position: fixed;
     width: 100%;
-    background: center url("image/ordinateur et café.jpg");
+    background: center url("image/bg stats.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -165,7 +166,7 @@
       /* SOUS MENU CACHE */
 
         .subnavbtn {
-          height: 80px;
+          height: 110px;
           display:inline-block;
           padding-left: 8%;
         }
